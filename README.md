@@ -16,7 +16,7 @@ Inquirer Version 8.2.4 is required
 - Answer all questions.
 - Quit whenever ready to create the HTML
 - Open html file in browser.
-[Main](./Screenshot.png)
+![Main](./main.jpg)
 ## Features
 Creates HTML File of all employee information under the manager
 
