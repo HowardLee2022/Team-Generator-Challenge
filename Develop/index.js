@@ -18,7 +18,7 @@ const todo = () =>{
     }).then(ans=>{
         if(ans.choose ==="Add intern"){
             addIntern();
-        }else if(ans.choose =="add Engineer"){
+        }else if(ans.choose ==="Add Engineer"){
             addEngineer();
         }else{
             fs.writeFile("index.html", generateHtml(employed), (err)=> err ? console.log(err):console.log("html file created"));
@@ -51,8 +51,8 @@ const addIntern = () => {
     ]).then(ans => {
         const newIntern = new Intern(ans.name, ans.id, ans.email, ans.school)
         employed.push(newIntern);
+        todo()
     })
-    todo();
 }
 
 const addManager = () => {
@@ -80,8 +80,9 @@ const addManager = () => {
     ]).then(ans => {
         const newManager = new Manager(ans.name, ans.id, ans.email, ans.office)
         employed.push(newManager); 
+        todo();
     })
-    todo();
+    
 }
 
 const addEngineer = () => {
@@ -109,8 +110,9 @@ const addEngineer = () => {
     ]).then(ans => {
         const newEngineer = new Engineer(ans.name, ans.id, ans.email, ans.github)
         employed.push(newEngineer);
+        todo();
     })
-    todo();
+    
 }
 
 addManager();
