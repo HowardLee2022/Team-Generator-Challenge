@@ -7,7 +7,7 @@ const generateHtml = require("./util/generateHtml");
 
 
 const employed = [];
-
+//Function that let user choose 3 option. Add engineer/Add Inter/Quit
 const todo = () =>{
     inquirer.prompt({
      
@@ -25,7 +25,7 @@ const todo = () =>{
         }
     })
 }
-
+//Function that adds a intern class to the employed array
 const addIntern = () => {
     inquirer.prompt([
     {   
@@ -54,7 +54,7 @@ const addIntern = () => {
         todo()
     })
 }
-
+//function that adds manager class to employed array
 const addManager = () => {
     inquirer.prompt([
     {   
@@ -84,7 +84,7 @@ const addManager = () => {
     })
     
 }
-
+//function that adds engineer class to employed array
 const addEngineer = () => {
     inquirer.prompt([
     {   
@@ -114,5 +114,5 @@ const addEngineer = () => {
     })
     
 }
-
+//this starts the application by creating a manager
 addManager();
